@@ -1,0 +1,81 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: none;
+}
+
+/* 🔹 Navbar Container */
+.nav-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔹 Logo */
+.logo {
+  margin-left: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* 🔹 Menu Icon (Hamburger) */
+.menu-icon {
+  font-size: 2rem;
+  margin-right: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+/* 🔹 Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+  gap: 20px;
+}
+
+/* 🔹 Navigation Link Styling */
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🔹 Mobile Navbar (Fixing Cutoff Issue) */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 100%; /* ✅ Full width */
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    display: none;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: flex; /* ✅ Fully visible when open */
+  }
+}
