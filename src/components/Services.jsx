@@ -1,51 +1,100 @@
 import './Services.css'
-import { FaLaptopCode, FaGoogle, FaBullhorn, FaSearch } from 'react-icons/fa'
+import {
+  FaLaptopCode,
+  FaGoogle,
+  FaBullhorn,
+  // FaSearch,
+  // FaShoppingCart,
+  // FaMobileAlt,
+  // FaChartLine,
+  FaShopify,
+} from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 function Services() {
+  const services = [
+    {
+      icon: <FaLaptopCode />,
+      title: 'Custom Web Development',
+      description:
+        'Bespoke websites built with modern technologies, ensuring fast loading times and responsive design across all devices.',
+    },
+    {
+      icon: <FaShopify />,
+      title: 'Shopify Development',
+      description:
+        'Custom Shopify store development with themes and apps tailored to your brand and business needs.',
+    },
+    {
+      icon: <FaBullhorn />,
+      title: 'Digital Advertising',
+      description:
+        'Strategic paid advertising campaigns across Google, Facebook, and Instagram to reach your target audience.',
+    },
+    {
+      icon: <FaGoogle />,
+      title: 'Google Business Profile',
+      description:
+        'Optimize your local presence with a professionally managed Google Business Profile to attract nearby customers.',
+    },
+
+    // {
+    //   icon: <FaShoppingCart />,
+    //   title: 'E-commerce Solutions',
+    //   description:
+    //     'Full-featured online stores with secure payment processing, inventory management, and order tracking.',
+    // },
+
+    // {
+    //   icon: <FaSearch />,
+    //   title: 'SEO Optimization',
+    //   description:
+    //     'Comprehensive SEO strategies to improve your search rankings and drive organic traffic to your website.',
+    // },
+    // {
+    //   icon: <FaChartLine />,
+    //   title: 'Analytics & Reporting',
+    //   description:
+    //     "Detailed insights and regular reports on your website's performance, traffic, and conversion rates.",
+    // },
+    // {
+    //   icon: <FaMobileAlt />,
+    //   title: 'Mobile-First Design',
+    //   description:
+    //     'Ensuring your website looks and performs perfectly on smartphones, tablets, and desktop devices.',
+    // },
+  ]
+
   return (
     <section id="services" className="services">
-      <h2>My Services</h2>
-      <p>I help businesses establish a strong online presence.</p>
+      <motion.div
+        className="services-header"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2>My Services</h2>
+        <p>
+          Comprehensive solutions to establish and grow your online presence
+        </p>
+      </motion.div>
 
       <div className="services-container">
-        {/* 🔹 Service 1 - Website Development */}
-        <div className="service-card">
-          <FaLaptopCode className="service-icon" />
-          <h3>Website Development</h3>
-          <p>
-            I build fast, modern, and responsive websites tailored to your
-            needs.
-          </p>
-        </div>
-
-        {/* 🔹 Service 2 - Google Business Setup */}
-        <div className="service-card">
-          <FaGoogle className="service-icon" />
-          <h3>Google Business Setup</h3>
-          <p>
-            I help get your business listed on Google Maps for better
-            visibility.
-          </p>
-        </div>
-
-        {/* 🔹 Service 3 - Ads Management */}
-        <div className="service-card">
-          <FaBullhorn className="service-icon" />
-          <h3>Google & Facebook Ads</h3>
-          <p>
-            I create and manage targeted ad campaigns to grow your business.
-          </p>
-        </div>
-
-        {/* 🔹 Service 4 - SEO Optimization */}
-        <div className="service-card">
-          <FaSearch className="service-icon" />
-          <h3>SEO Optimization</h3>
-          <p>
-            I optimize your website to rank higher on Google and increase
-            traffic.
-          </p>
-        </div>
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="service-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="service-icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </motion.div>
+        ))}
       </div>
     </section>
   )

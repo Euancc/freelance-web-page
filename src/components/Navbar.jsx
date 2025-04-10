@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-scroll'
 import './Navbar.css'
 
 function Navbar() {
@@ -7,34 +8,68 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <h1 className="logo">MyBrand</h1>
+        <Link
+          to="home"
+          className="logo"
+          smooth={true}
+          duration={500}
+          offset={-70}
+        >
+          EC
+        </Link>
 
-        {/* 🔹 Hamburger Menu Icon */}
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
 
-        {/* 🔹 Navigation Links */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li>
-            <a href="#home" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#services" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#portfolio" onClick={() => setMenuOpen(false)}>
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

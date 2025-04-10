@@ -1,0 +1,43 @@
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page-content {
+  flex: 1;
+  background: linear-gradient(to right, #0073ff, #00c6ff);
+  padding: 60px 20px;
+}
+
+.contact-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .contact-page-content {
+    padding: 40px 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+}

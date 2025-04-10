@@ -1,41 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-}
+:root {
+  /* Primary colors */
+  --primary: #5b89a6;
+  --primary-dark: #456c82;
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
+  /* Secondary colors */
+  --secondary: #7c6a8c;
+  --secondary-dark: #5d4f69;
 
-/* Navbar Font */
-.navbar {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
+  /* Accent colors */
+  --accent: #c17f59;
+  --accent-dark: #9c6547;
 
-/* Hero Section Font */
-.hero h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-}
+  /* Text colors */
+  --text: #2d3b45;
+  --text-light: #4a5c6a;
 
-.hero p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
+  /* Background colors */
+  --background: #f4f6f8;
+  --background-alt: #edf1f5;
+  --card-bg: #ffffff;
+
+  /* Util colors */
+  --shadow: rgba(91, 137, 166, 0.1);
+  --border: rgba(91, 137, 166, 0.15);
+
+  /* Gradients */
+  --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-alt: linear-gradient(135deg, var(--secondary), var(--accent));
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  background-color: var(--background);
+  color: var(--text);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 70px;
+}
+
+#home {
+  min-height: calc(100vh - 70px);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text);
 }

@@ -1,9 +1,10 @@
 import './Hero.css'
 import { motion } from 'framer-motion'
+import { Link as ScrollLink } from 'react-scroll'
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero-content">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -20,14 +21,18 @@ function Hero() {
           I create stunning websites, set up Google Business accounts, and run
           effective Google & Facebook ads to get you noticed.
         </motion.p>
-        <motion.a
-          href="#contact"
-          className="hero-btn"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Get Started
-        </motion.a>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="hero-btn"
+          >
+            Get Started
+          </ScrollLink>
+        </motion.div>
       </div>
     </section>
   )

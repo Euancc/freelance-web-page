@@ -1,27 +1,29 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
 import Services from './components/Services'
-import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="services">
-        <Services />
-      </section>
-      <section id="portfolio">
-        <Portfolio />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+      <main>
+        <div id="home">
+          <Hero />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+      </main>
       <Footer />
     </div>
   )

@@ -1,4 +1,5 @@
 import './Footer.css'
+import { Link } from 'react-scroll'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
@@ -8,7 +9,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>MyBrand</h3>
+          <h3>EC</h3>
           <p>Building digital success stories, one website at a time.</p>
         </div>
 
@@ -16,16 +17,19 @@ function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link to="home" smooth={true} duration={500} offset={-70}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link to="services" smooth={true} duration={500} offset={-70}>
+                Services
+              </Link>
             </li>
             <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
+              <Link to="contact" smooth={true} duration={500} offset={-70}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
