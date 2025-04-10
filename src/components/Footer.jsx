@@ -1,6 +1,7 @@
 import './Footer.css'
 import { Link } from 'react-scroll'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import businessLogo from '../assets/business_logo.png'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,7 +10,11 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>EC</h3>
+          <div className="footer-logo">
+            <Link to="home" smooth={true} duration={500} offset={-70}>
+              <img src={businessLogo} alt="Business Logo" />
+            </Link>
+          </div>
           <p>Building digital success stories, one website at a time.</p>
         </div>
 

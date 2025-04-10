@@ -31,6 +31,16 @@
   position: relative;
 }
 
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 65px; /* Increased from 50px */
+  width: auto;
+  cursor: pointer;
+}
+
 .footer-section h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;

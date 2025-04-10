@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
+import businessLogo from '../assets/business_logo.png'
 import './Navbar.css'
 
 function Navbar() {
@@ -15,7 +16,7 @@ function Navbar() {
           duration={500}
           offset={-70}
         >
-          EC
+          <img src={businessLogo} alt="Business Logo" className="nav-logo" />
         </Link>
 
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>

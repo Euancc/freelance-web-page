@@ -90,6 +90,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .hero-btn::before {
